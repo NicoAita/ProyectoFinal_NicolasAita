@@ -1,0 +1,252 @@
+
+/* Estilos Globales */
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(58, 58, 55);
+}
+
+.estilosBuscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estilosBuscador input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 30px;
+    /*  background-color: rgb(250, 250, 61); */
+}
+
+.icono-carrito {
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+
+.icono-carrito:hover {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+.contenedor-icono {
+    position: relative;
+}
+
+/* Clase que contiene el icono del carrito */
+
+.contador-producto {
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos {
+    font-size: 12px;
+}
+
+/* Clase que contiene los productos del carrito */
+
+.contenedor-productos-carrito {
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    /* Esto hace que el carrito quede por arriba de las cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.432);
+}
+
+.fila-producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+}
+
+.info-producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.9;
+
+}
+
+.titulo-producto-carrito {
+    font-size: 20px;
+}
+
+.precio-producto-carrito {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    /* LE SACÉ EL MARGIN LEFT ----------------------------*/
+    background-color: yellow
+}
+
+ 
+
+.contenedor-btn-comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.btn-comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    border: none;
+    margin: 0 auto; 
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+ 
+}
+ 
+
+.botonOkSweetAlert{ 
+    
+    background-color: #000000;  
+    color: #FFFFFF;  
+}
+
+
+
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icono-cerrar {
+    width: 25px;
+    height: 25px;
+
+}
+
+.info-producto-carrito .icono-cerrar:hover {
+    stroke: red;
+    cursor: pointer;
+}
+
+.total-carrito {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.total-carrito h3 {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+
+}
+
+.oculto-carrito {
+    display: none;
+}
+
+/* Estilos del Contenedor de Artículos */
+
+.contenedor-articulos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.articulo {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.articulo:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.articulo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.articulo figure {
+    overflow: hidden;
+}
+
+.articulo:hover img {
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+.info-producto {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-producto button {
+    border: none;
+    background: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 15px 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
